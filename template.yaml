@@ -108,9 +108,12 @@ spec:
         targetPath: '.'
         copyWithoutRender:
           - 'template.yaml'
+          - 'tests/test_cookiecutter_generation.py'
         values:
+          github_username: 'kcoleman731'
           component_id: '{{ parameters.component_id }}'
           project_short_description: '{{ parameters.project_short_description }}'
+          docker_hub_username: 'kcoleman731'
           docker_image: '{{ parameters.docker_image }}'
           docker_build_image: '{{ parameters.docker_build_image }}'
           docker_build_image_version: '{{ parameters.docker_build_image_version }}'
