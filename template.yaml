@@ -119,6 +119,9 @@ spec:
           use_cobra_cmd: '{{ parameters.use_cobra_cmd }}'
           use_ci: '{{ parameters.use_ci }}'
           use_docker: '{{ parameters.use_docker }}'
+          go_mod_or_dep: 'y'
+          use_git: 'y'
+
 
     - id: fetch-docs
       name: Fetch Docs
