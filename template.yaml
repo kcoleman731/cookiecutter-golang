@@ -151,7 +151,15 @@ spec:
       input:
         allowedHosts: ['github.com']
         description: 'This is {{ parameters.component_id }}'
-        repoUrl: 'https://github.com/kcoleman731/argo-apps'
+        url: 'https://github.com/kcoleman731/argo-apps'
+        targetPath: 'gitops'
+
+    - id: push-gitops
+      name: Push Gitops
+      action: push:github
+      input:
+        allowedHosts: ['github.com']
+        url: 'https://github.com/kcoleman731/argo-apps'
         targetPath: 'gitops'
 
     - id: register
