@@ -11,6 +11,7 @@ metadata:
 spec:
   owner: kcoleman731
   type: service
+  
 
   # these are the steps which are rendered in the frontend with the form input
   parameters:
@@ -112,6 +113,7 @@ spec:
       action: fetch:cookiecutter
       input:
         url: ./template
+        targetPath: '.'
         values:
           name: '{{ parameters.name }}'
           owner: '{{ parameters.owner }}'
@@ -120,6 +122,7 @@ spec:
       name: Publish
       action: publish:github
       input:
+        sourcePath: '.'
         allowedHosts: ['github.com']
         description: 'This is {{ parameters.name }}'
         repoUrl: '{{ parameters.repoUrl }}'
