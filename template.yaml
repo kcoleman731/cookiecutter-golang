@@ -100,7 +100,7 @@ spec:
         url: "https://github.com/kcoleman731/cookiecutter-golang"
         targetPath: '.'
         copyWithoutRender:
-          - './template.yaml'
+          - 'template.yaml'
         values:
           component_id: '{{ parameters.component_id }}'
           project_short_description: '{{ parameters.project_short_description }}'
