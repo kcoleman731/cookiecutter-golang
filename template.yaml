@@ -100,8 +100,6 @@ spec:
         url: ./template
         targetPath: '.'
         values:
-          name: '{{ parameters.name }}'
-          owner: '{{ parameters.owner }}'
           component_id: '{{ parameters.component_id }}'
           project_short_description: '{{ parameters.project_short_description }}'
           docker_image: '{{ parameters.docker_image }}'
@@ -125,7 +123,7 @@ spec:
       input:
         sourcePath: '.'
         allowedHosts: ['github.com']
-        description: 'This is {{ parameters.name }}'
+        description: 'This is {{ parameters.component_id }}'
         repoUrl: '{{ parameters.repoUrl }}'
 
     - id: register
