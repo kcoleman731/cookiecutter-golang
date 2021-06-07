@@ -19,21 +19,6 @@ spec:
       required:
         - name
       properties:
-        name:
-          title: Name
-          type: string
-          description: Unique name of the component
-          ui:autofocus: true
-          ui:options:
-            rows: 5
-        owner:
-          title: Owner
-          type: string
-          description: Owner of the component
-          ui:field: OwnerPicker
-          ui:options:
-            allowedKinds:
-              - Group
         component_id:
           title: Name
           type: string
@@ -117,6 +102,15 @@ spec:
         values:
           name: '{{ parameters.name }}'
           owner: '{{ parameters.owner }}'
+          component_id: '{{ parameters.component_id }}'
+          project_short_description: '{{ parameters.project_short_description }}'
+          docker_image: '{{ parameters.docker_image }}'
+          docker_build_image: '{{ parameters.docker_build_image }}'
+          docker_build_image_version: '{{ parameters.docker_build_image_version }}'
+          use_logrus_logging: '{{ parameters.use_logrus_logging }}'
+          use_viper_config: '{{ parameters.use_viper_config }}'
+          use_cobra_cmd: '{{ parameters.use_cobra_cmd }}'
+          use_ci: '{{ parameters.use_ci }}'
 
     - id: fetch-docs
       name: Fetch Docs
