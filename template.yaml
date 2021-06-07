@@ -62,6 +62,13 @@ spec:
             - "y"
             - "n"
           default: "y"
+        use_docker:
+          title: Enable Docker
+          type: string
+          enum:
+            - "y"
+            - "n"
+          default: "y"
         use_cobra_cmd:
           title: Enable Cobra CLI Tools (https://github.com/spf13/cobra)
           type: string
@@ -111,6 +118,7 @@ spec:
           use_viper_config: '{{ parameters.use_viper_config }}'
           use_cobra_cmd: '{{ parameters.use_cobra_cmd }}'
           use_ci: '{{ parameters.use_ci }}'
+          use_docker: '{{ parameters.use_docker }}'
 
     - id: fetch-docs
       name: Fetch Docs
