@@ -104,12 +104,15 @@ spec:
       name: Fetch Base
       action: fetch:cookiecutter
       input:
-        url: "https://github.com/kcoleman731/cookiecutter-golang"
+        url: "https://github.com/kcoleman731/cookiecutter-golang/"
         targetPath: '.'
         copyWithoutRender:
           - 'template.yaml'
           - 'tests/test_cookiecutter_generation.py'
         values:
+          owner: 'kcoleman731'
+          name: '{{ parameters.component_id }}'
+          storePath: '{{ parameters.component_id }}'
           github_username: 'kcoleman731'
           component_id: '{{ parameters.component_id }}'
           project_short_description: '{{ parameters.project_short_description }}'
