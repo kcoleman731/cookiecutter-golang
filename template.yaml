@@ -100,15 +100,15 @@ spec:
         url: "https://github.com/kcoleman731/cookiecutter-golang"
         targetPath: '.'
         values:
-          component_id: '{{ cookiecutter.component_id }}'
-          project_short_description: '{{ cookiecutter.project_short_description }}'
-          docker_image: '{{ cookiecutter.docker_image }}'
-          docker_build_image: '{{ cookiecutter.docker_build_image }}'
-          docker_build_image_version: '{{ cookiecutter.docker_build_image_version }}'
-          use_logrus_logging: '{{ cookiecutter.use_logrus_logging }}'
-          use_viper_config: '{{ cookiecutter.use_viper_config }}'
-          use_cobra_cmd: '{{ cookiecutter.use_cobra_cmd }}'
-          use_ci: '{{ cookiecutter.use_ci }}'
+          component_id: '{{ parameters.component_id }}'
+          project_short_description: '{{ parameters.project_short_description }}'
+          docker_image: '{{ parameters.docker_image }}'
+          docker_build_image: '{{ parameters.docker_build_image }}'
+          docker_build_image_version: '{{ parameters.docker_build_image_version }}'
+          use_logrus_logging: '{{ parameters.use_logrus_logging }}'
+          use_viper_config: '{{ parameters.use_viper_config }}'
+          use_cobra_cmd: '{{ parameters.use_cobra_cmd }}'
+          use_ci: '{{ parameters.use_ci }}'
 
     - id: fetch-docs
       name: Fetch Docs
