@@ -17,7 +17,7 @@ spec:
   parameters:
     - title: Fill in some steps
       required:
-        - name
+        - component_id
       properties:
         component_id:
           title: Name
